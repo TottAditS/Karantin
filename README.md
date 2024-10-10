@@ -1,3 +1,5 @@
+
+![karantin-ezgif com-optimize](https://github.com/user-attachments/assets/2dd5f93c-b87e-4c11-ab02-127332e7d6a6)
 <h1>Karantin</h1>
 
 <h3>About This Project</h3>
