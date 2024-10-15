@@ -3,7 +3,7 @@
 <h1>Karantin</h1>
 
 <h3>About This Project</h3>
-This project was created to conduct several experiments, such as utilizing the Unity New Input System, URP Post-Processing to match Unity’s HDRP, and Game Optimization, as well as attempting to implement Netcode for GameObject.
+<p align="justify">This project was created to conduct several experiments, such as utilizing the Unity New Input System, URP Post-Processing to match Unity’s HDRP, and Game Optimization, as well as attempting to implement Netcode for GameObject.
 
 <h3>Project Info</h3>
 
