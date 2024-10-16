@@ -1,4 +1,4 @@
-
+![Karantin_oklusion](https://github.com/user-attachments/assets/5c416a05-0a81-4127-b0f0-1690564a3929)
 ![karantin-ezgif com-optimize](https://github.com/user-attachments/assets/2dd5f93c-b87e-4c11-ab02-127332e7d6a6)
 <h1>Karantin</h1>
 
@@ -26,23 +26,39 @@
 
 <h3>Occlusion and Level of Detail Optimization</h3>
 <p align="justify">This feature helps optimize game performance by only rendering visible objects and adjusting the level of detail based on the camera’s distance, reducing unnecessary rendering overhead.</p>
+![Karantin_oklusion](https://github.com/user-attachments/assets/b86fbcd0-ff43-4c7c-b576-83cd0ae90b4e)
 
 <h3>[Not Implemented] Simple Netcode For GameObjects</h3>
 <p align="justify">This feature was planned to implement basic network functionality for synchronizing player actions and interactions, but it has not been integrated into the current prototype.</p>
+![netcode_palyer_ttest](https://github.com/user-attachments/assets/9f9d5126-b997-43a0-b9c9-082e6e7f9bb1)
 
 <h3> Better URP Post Processing</h3>
 <p align="justify">Improved post-processing techniques were applied using URP to enhance visual quality, aiming to achieve better lighting, color grading, and effects similar to HDRP without compromising performance.</p>
+![image](https://github.com/user-attachments/assets/60ac0797-767d-4f4c-9ac0-d40eb8bc1fd6)
 
 <h3> Simple Object Pooling for Ammunitions</h3>
 <p align="justify">Object pooling was used to manage ammunition instances efficiently, minimizing memory allocation and reducing performance spikes caused by frequent object instantiation and destruction.</p>
+
 ```
-   ammoPool = new List<GameObject>();
-   for (int i = 0; i < poolSize; i++)
-   {
-       GameObject ammo = Instantiate(ammoPrefab);
-       ammo.SetActive(false);
-       ammoPool.Add(ammo);
-   }
+-> This is the key code for Object Pooling
+ammoPool = new List<GameObject>();
+for (int i = 0; i < poolSize; i++)
+{
+    GameObject ammo = Instantiate(ammoPrefab);
+    ammo.SetActive(false);
+    ammoPool.Add(ammo);
+}
+
+-> And this is to call object from the pool
+private GameObject GetPooledAmmo()
+{
+    foreach (GameObject ammo in ammoPool)
+    {
+        if (!ammo.activeInHierarchy)
+            return ammo;
+    }
+    return null;
+}
 ```
 
 <h3>What I Learned From Make This Game</h3>
