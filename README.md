@@ -35,6 +35,15 @@
 
 <h3> Simple Object Pooling for Ammunitions</h3>
 <p align="justify">Object pooling was used to manage ammunition instances efficiently, minimizing memory allocation and reducing performance spikes caused by frequent object instantiation and destruction.</p>
+```
+   ammoPool = new List<GameObject>();
+   for (int i = 0; i < poolSize; i++)
+   {
+       GameObject ammo = Instantiate(ammoPrefab);
+       ammo.SetActive(false);
+       ammoPool.Add(ammo);
+   }
+```
 
 <h3>What I Learned From Make This Game</h3>
 <p align="justify">Throughout the development of this project, I focused on conducting several technical experiments to deepen my understanding and proficiency in Unity’s advanced features. I explored the Unity New Input System to enhance player control and responsiveness, experimented with URP Post-Processing settings to replicate the visual quality of Unity’s HDRP, and fine-tuned various techniques for Game Optimization to ensure smooth performance. Additionally, I attempted to implement Netcode for GameObject to gain insights into networked gameplay and synchronization, further expanding my knowledge of multiplayer game development. These learnings have significantly strengthened my ability to handle complex game mechanics and visual fidelity in Unity.</p>
