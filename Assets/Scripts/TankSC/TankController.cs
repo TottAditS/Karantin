@@ -182,6 +182,8 @@ public class TankController : MonoBehaviour
     public GameObject TankShootEffect;
     public Transform normalTarget;            // Target normal (misal, player)
     public GameObject TankCrosshair;
+    public GameObject scopecam;
+    //
 
     void mode()
     {
@@ -192,9 +194,10 @@ public class TankController : MonoBehaviour
             if (vignette != null)
             {
                 TankCrosshair.SetActive(true);
-                Composer.m_TrackedObjectOffset.y = 0f;
-                transposer.m_FollowOffset.y = 7f;
-                transposer.m_FollowOffset.z = 0f;
+                scopecam.SetActive(true);
+                //Composer.m_TrackedObjectOffset.y = 0f;
+                //transposer.m_FollowOffset.y = 7f;
+                //transposer.m_FollowOffset.z = 0f;
                 vignette.intensity.value = 0.5f;  // Sesuaikan sesuai kebutuhan (misal: lebih gelap)
             }
         }
@@ -205,9 +208,10 @@ public class TankController : MonoBehaviour
             if (vignette != null)
             {
                 TankCrosshair.SetActive(false);
-                Composer.m_TrackedObjectOffset.y = 6.9f;
-                transposer.m_FollowOffset.y = 10f;
-                transposer.m_FollowOffset.z = -7.7f;
+                scopecam.SetActive(false);
+                //Composer.m_TrackedObjectOffset.y = 6.9f;
+                //transposer.m_FollowOffset.y = 10f;
+                //transposer.m_FollowOffset.z = -7.7f;
                 vignette.intensity.value = 0.2f;  // Sesuaikan sesuai kebutuhan (misal: lebih gelap)
             }
         }
